@@ -74,11 +74,54 @@ document.write("<br> index of humman:" + str.indexOf("human"));
 document.write("<br> slicing of string by  giving a range :" + str.slice(5,8));
 document.write("<br> slicing of string  :" + str.slice(5));
 
+//call stack working
+
+var name="rasik";
+
+function first(){
+    var a="Hello";
+    second();
+    a += name;
+    console.log(a);
+}
+function second(){
+    var a="hi";
+    third();
+    a+= name;
+    console.log(a);
+}
+function third(){
+    var a="bye";
+    a+= name;
+    console.log(a);
+}
+first();
+
+//Array
+
+var array=['rizu','rasu','ikku','attu'];
+console.log(array[2]);
+
+var teacher = "Salman";
+function otherClass () {
+    teacher = "Tajammul";
+    topic = "JS"
+    console.log("Welcome!",topic); 
+}
+otherClass();
+console.log(teacher);
 
 
-
-
-
+//Array assignment
+var array=['one','two','three',4,5.0];
+document.write("<br>Array")
+function printArray (Array){
+    length=array.length;
+    for(i=0;i<length;i++){
+        document.write("<br>"+Array[i]);
+    }
+}
+printArray(array);
 
 
 
